@@ -1,4 +1,5 @@
-<link rel="stylesheet" href="decorate.css">
+<link rel="stylesheet" href="decorate.css"/>
+<center>
 <?php
 
 include "connect.php";
@@ -10,6 +11,7 @@ if (mysqli_num_rows($result) > 0) {
 
 ?>
   <table class="table">
+    <th> ID </th>
     <th> first - lastname </th>
     <th> email </th>
     <th> phone </th>
@@ -23,12 +25,13 @@ if (mysqli_num_rows($result) > 0) {
 
     ?>
       <tr>
+        <td><?php echo "$row[id]"; ?></td>
         <td><?php echo "$row[firstname] $row[lastname]"; ?></td>
         <td><?php echo "$row[email]"; ?></td>
         <td><?php echo "$row[phone]"; ?></td>
         <td><?php echo "$row[address]"; ?></td>
-        <td> <?php echo "<a href='member_edit.php?id=$row[id]'> Edit </a>";?></td>
-        <td> <?php echo "<a href='member_delete.php?id=$row[id]'> Delete </a>";?></td>
+        <td><?php echo "<a href='member_edit.php?id=$row[id]'> Edit </a>";?></td>
+        <td><?php echo "<a href='member_delete.php?id=$row[id]'> Delete </a>";?></td>
       </tr>
 
     <?php
@@ -44,4 +47,6 @@ if (mysqli_num_rows($result) > 0) {
 }
 
 mysqli_close($conn);
+
 ?>
+</center>
