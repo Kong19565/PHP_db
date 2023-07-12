@@ -1,0 +1,12 @@
+.table{
+    border: solid 1px #000000 ;
+}
+
+.table tr:hover{
+    background-color: aqua;
+}
+
+.table tr td{
+    border: 1px solid #000000;
+    text-align: center;
+}
