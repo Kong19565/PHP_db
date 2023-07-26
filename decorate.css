@@ -1,13 +1,95 @@
-.table{
-    border-collapse: collapse;
-    border: 3px solid #000000;
+body {
+  background-color: rgb(171, 186, 185);
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+  color: #2a348a;
+  font-weight: bold;
 }
 
-.table tr:hover{
-    background-color: aqua;
+.center {
+  float: center;
+  display: flex;
+  justify-content: center;
+  overflow: auto;
 }
 
-.table tr td{
-    border: 1px solid #000000;
-    text-align: center;
+.container {
+  max-width: 800px;
+  margin: auto;
+}
+
+.index1 {
+  color: #7074a1;
+  text-align: center;
+  font-size: 35px;
+  
+}
+
+.index2 {
+  color: #2a348a;
+  text-align: center;
+  font-size: 25px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+}
+
+.table {
+  border-collapse: collapse;
+  border: 3px solid #b11c1c;
+  background-color: antiquewhite;
+ 
+}
+
+.table tr:hover {
+  background-color: aqua;
+}
+
+.table th {
+  border: 1px solid #b11c1c;
+  font-size: 30px;
+  padding: 5px;
+  color: rgb(0, 0, 0);
+}
+
+.table tr td {
+  border: 1px solid #b11c1c;
+  text-align: center;
+  padding: 5px;
+  color: rgb(0, 0, 0);
+
+}
+
+.input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border-radius: 20px;
+  border: 2px dashed #a997ff;
+}
+
+.button {
+  background-color: #6da5c0;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  transition-timing-function: ease-in-out;
+}
+
+.button:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+img{
+    width: 500px;
+    height: 300px;
 }

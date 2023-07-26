@@ -1,52 +1,52 @@
-<link rel="stylesheet" href="decorate.css"/>
+<link rel="stylesheet" href="decorate.css" />
 <center>
-<?php
+  <?php
 
-include "connect.php";
+  include "connect.php";
 
-$sql = "SELECT * FROM tbl_member";
-$result = mysqli_query($conn, $sql);
+  $sql = "SELECT * FROM tbl_member";
+  $result = mysqli_query($conn, $sql);
 
-if (mysqli_num_rows($result) > 0) {
+  if (mysqli_num_rows($result) > 0) {
 
-?>
-  <table class="table">
-    <th> ID </th>
-    <th> first - lastname </th>
-    <th> email </th>
-    <th> phone </th>
-    <th> address </th>
-    <th> Edit </th>
-    <th> delete </th>
+  ?>
+    <table class="table">
+      <th> first - lastname </th>
+      <th> email </th>
+      <th> phone </th>
+      <th> address </th>
+      <th> photo </th>
+      <th> Edit </th>
+      <th> delete </th>
 
-    <?php
+      <?php
 
-    while ($row = mysqli_fetch_assoc($result)) {
+      while ($row = mysqli_fetch_assoc($result)) {
 
-    ?>
-      <tr>
-        <td><?php echo "$row[id]"; ?></td>
-        <td><?php echo "$row[firstname] $row[lastname]"; ?></td>
-        <td><?php echo "$row[email]"; ?></td>
-        <td><?php echo "$row[phone]"; ?></td>
-        <td><?php echo "$row[address]"; ?></td>
-        <td><?php echo "<a href='member_edit.php?id=$row[id]'> Edit </a>";?></td>
-        <td><?php echo "<a href='member_delete.php?id=$row[id]'> Delete </a>";?></td>
-      </tr>
+      ?>
+        <tr>
+          <td><?php echo "$row[firstname] $row[lastname]"; ?></td>
+          <td><?php echo "$row[email]"; ?></td>
+          <td><?php echo "$row[phone]"; ?></td>
+          <td><?php echo "$row[address]"; ?></td>
+          <td><img src="./img/<?php echo $row[photo] ?>" /> </td>
+          <td><?php echo "<a href='member_edit.php?id=$row[id]'> Edit </a>"; ?></td>
+          <td><?php echo "<a href='member_delete.php?id=$row[id]'> Delete </a>"; ?></td>
+        </tr>
 
-    <?php
-    }
-    ?>
+      <?php
+      }
+      ?>
 
-  </table>
+    </table>
 
-<?php
+  <?php
 
-} else {
-  echo "0 results";
-}
+  } else {
+    echo "0 results";
+  }
 
-mysqli_close($conn);
+  mysqli_close($conn);
 
-?>
+  ?>
 </center>
